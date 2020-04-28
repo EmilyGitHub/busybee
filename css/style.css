@@ -1,0 +1,31 @@
+.jumbotron {
+    background-color: rgb(255, 245, 210);
+    margin: 0px;
+    padding: 30px;
+}
+
+.beeLogo {
+    background-color: rgb(253, 220, 99);
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+h1, h3 {
+   
+}
+
+.navbarBeeLogo {
+    background-color: rgb(253, 220, 99);
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.navbar {
+    background-color: #649B92;
+    color: white;
+}
+
+.button {
+    
+}
