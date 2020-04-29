@@ -1,14 +1,18 @@
 .jumbotron {
+    box-sizing: border-box;
     background-color: rgb(255, 245, 210);
     margin: 0px;
-    padding: 30px;
+    padding: 20px;
 }
 
 .beeLogo {
+    box-sizing: border-box;
     background-color: rgb(253, 220, 99);
     padding: 15px;
     border: 2px solid black;
     border-radius: 8px;
+    height: auto;
+    width: 125px;
 }
 
 h1, h3 {
@@ -16,16 +20,31 @@ h1, h3 {
 }
 
 .navbarBeeLogo {
+    box-sizing: border-box;
     background-color: rgb(253, 220, 99);
     border: 2px solid black;
     border-radius: 8px;
 }
 
 .navbar {
+    box-sizing: border-box;
     background-color: #649B92;
     color: white;
 }
 
-.button {
-    
+.border-box {
+    box-sizing: border-box;
 }
+
+@media screen and (max-width: 600px) {
+    div.signInButton {
+      display: none;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+    div.registerButton {
+      display: none;
+    }
+  }
+

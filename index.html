@@ -13,23 +13,26 @@
     <!-- Come up with a better brand name -->
     <title> Busy Bee -- Your Virtual Chore Chart </title>
   </head>
-  <body>
+  <body class="border-box">
     <header class="jumbotron jumbotron-fluid">
       <div class="container">
         <div class="row">
-          <div class="col-4 col-sm-3 col-md-2 align-self-center">
+          <div class="col-3 col-sm-3 col-md-3 col-lg-2 align-self-center">
             <img src="img/forumbee.svg" class="img-fluid beeLogo" />
           </div>
-          <div class="col-6 com-sm-">
+          <div class="col-9 col-sm-7 col-md-7 col-lg-7">
             <br>
             <h1> Busy Bee </h1>
             <h3> Your Virtual Chore Chart </h3>
           </div>
-          <div class="col-md-1">
-            <button type="button" class="btn btn-dark active"> Sign In </button>
-          </div>
-          <div class="col-md-1">
-            <button type="button" class="btn btn-outline-dark"> Register </button>
+          <div class="btn-group btn-group-lg col-sm-2">
+            <div id="signInButton" class=" signInButton">
+              <button type="button" class="btn btn-dark active"> Sign In </button>
+            </div>
+            <br>
+            <div id="registerButton" class="registerButton">
+              <button type="button" class="btn btn-outline-dark "> Register </button>
+            </div>
           </div>
         </div>
       </div>

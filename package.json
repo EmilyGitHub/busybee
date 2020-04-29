@@ -1,0 +1,29 @@
+{
+  "name": "portfolio-project",
+  "version": "1.0.0",
+  "description": "Busy Bee Virtual Chore Assignment App for Children!",
+  "main": "index.js",
+  "scripts": {
+    "lite": "lite-server",
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmilyGitHub/busybee.git"
+  },
+  "author": "Emily Dardis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmilyGitHub/busybee/issues"
+  },
+  "homepage": "https://github.com/EmilyGitHub/busybee#readme",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.12.9"
+  }
+}
