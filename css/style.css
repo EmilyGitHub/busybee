@@ -1,36 +1,33 @@
 .jumbotron {
     box-sizing: border-box;
-    background-color: #F2FEDC;
+    background: rgb(79,116,163);
+    background: linear-gradient(90deg, rgba(79,116,163,1) 0%, rgba(62,132,163,1) 23%, rgba(72,145,155,1) 47%, rgba(100,155,146,1) 75%);
     margin: 0px;
     padding: 20px;
 }
 
 body {
     background-color: #fefffb;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .beeLogo {
-
     background-color: #FFC107;
-    padding: 15px;
-    border: 2px solid black;
+    border: .15rem solid white;
     border-radius: 8px;
-    height: 125px;
-    width: 125px;
+    height: 6.5rem;
+    width: 6.5rem;
+    color: white;
+    font-size: 6rem;
 }
 
 .navbarBeeLogo {
     background-color: #FFC107;
-    padding: 4px;
-    border: 1px solid black;
-    border-radius: 8px;
 }
 
-.navbar {
-    background-color: #649B92;
-}
 footer {
-    background-color: #649B92;
+    background: rgb(79,116,163);
+    background: linear-gradient(90deg, rgba(79,116,163,1) 0%, rgba(62,132,163,1) 23%, rgba(72,145,155,1) 47%, rgba(100,155,146,1) 75%);
 }
 
 .border-box {
@@ -41,27 +38,58 @@ footer {
     border: 1px solid black;
 }
 
-.card {
-    border: 1px solid black;
-    border-radius: 8px;
-    padding: 25px;
-    background-color: white;
+.card-body {
+    background-color: #e3ebee;
+    max-width: 100%;
+    height: auto;
 }
 
-.roundedCorners {
-    border-radius: 8px;
+#choresCard {
+    display: flex;
 }
 
 
-@media screen and (max-width: 600px) {
+#row {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logoBox, #loginButtons {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+h1 {
+    color: white;
+}
+
+#iron {
+    max-width: 100%;
+    height: auto;
+}
+
+.fa-snowplow {
+   font-size: 10rem; 
+}
+
+#todo-textbox {
+    width: 85%;
+}
+
+
+
+@media screen and (max-width: 767px) {
     div.signInButton {
       display: none;
     }
   }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
     div.registerButton {
       display: none;
     }
   }
 
+  

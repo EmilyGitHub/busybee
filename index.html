@@ -8,39 +8,124 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <script src="https://use.fontawesome.com/894a34b01d.js"></script>
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- Come up with a better brand name -->
+    <!-- Come up with a better name? -->
     <title> Busy Bee -- Your Virtual Chore Chart </title>
   </head>
   <body>
     <header class="jumbotron jumbotron-fluid py-5">
       <div class="container">
-        <div class="row">
-          <div class="col-3 col-sm-3 col-md-3 col-lg-2 align-self-center">
-                <img src="img/forumbee.svg" class="img-fluid beeLogo" />
-          </div>
-          <div class="col-9 col-sm-7 col-md-7 col-lg-7 align-self-center">
-            <br>
-            <h1> Busy Bee </h1>
-            <h3> Your Virtual Chore Chart </h3>
-          </div>
-          <div class="btn-group btn-group-lg col-sm-2 align-self-center">
-            <div id="signInButton" class=" signInButton">
-              <button type="button" class="btn btn-dark active"> Sign In </button>
+        <div class="row" id="row">
+          <div id="logoBox">
+            <div class="column-1">
+              <i class="fa fas fa-forumbee beeLogo p-.5 text-justify text-center text-light"></i>
+                <!--<img src="img/forumbee.svg" class="img-fluid beeLogo" />--> 
             </div>
-            <br>
-            <div id="registerButton" class="registerButton">
-              <button type="button" class="btn btn-light buttonBorder"> Register </button>
+            <div class="column-2 ml-5">
+              <h1> Busy Bee </h1>
+              <h3 class="text-light"> Your Virtual Chore Chart </h3>
             </div>
+          </div>
+          <div id="loginButtons">
+          <div id="signInButton" class="column-1 signInButton mr-4">
+            <button type="button" class="btn btn-dark active"> Sign In </button>
+          </div>
+          <div id="registerButton" class="column-2 registerButton">
+            <button type="button" class="btn btn-light buttonBorder"> Register </button>
           </div>
         </div>
       </div>
     </header>
 
-    <nav class="navbar navbar-expand-sm sticky-top">
+    <div id="loginModal" class="modal fade" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-warning text-light">
+              <h3 class="modal-title">Login</h3>
+              <button type="button" class="close" data-dismiss="modal">&times; </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-12">
+                      <label class="sr-only" for="loginEmail">Email address</label>
+                      <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
+                  </div>
+                  <div class="form-group col-12">
+                      <label class="sr-only" for="loginPassword">Password</label>
+                      <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
+                  </div>
+                  <div class="col">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label"> Remember Me</label>
+                    </div>
+                  </div>   
+                </div>
+                <div class="form-row">
+                  <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-warning btn-sm ml-1">Sign In</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="registerModal" class="modal fade" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-warning text-light">
+            <h3 class="modal-title">Register</h3>
+            <button type="button" class="close" data-dismiss="modal">&times; </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-12">
+                    <label class="sr-only" for="loginEmail">Email address</label>
+                    <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
+                  </div>
+                  <div class="form-group col-12">
+                    <label class="sr-only" for="loginPassword">Password</label>
+                    <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
+                  </div>
+                  <div class="form-group col-12">
+                    <label class="sr-only" for="confirmPassword">Confirm Password</label>
+                    <input type="password" class="form-control form-control-sm" id="confirmPassword" placeholder="Re-enter Password">
+                  </div>
+                  <div class="form-group col-12">
+                    <label class="sr-only"
+                    for="age">Age</label>
+                    <input type="number" class="form-control form-control-sm" id="age" placeholder="Age">
+                  </div>
+                  <div class="col">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label"> Remember Me</label>
+                    </div>
+                  </div>   
+                  <div class="form-row">
+                    <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-warning btn-sm ml-1">Register</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-sm sticky-top navbar-light bg-warning">
       <div class="container">
-        <a class="navbar-brand" href="#"><img src="img/forumbee.svg" class="navbarBeeLogo" height="30" width="30" /></a>
+        <a class="navbar-brand" href="#"><!--<img src="img/forumbee.svg" class="navbarBeeLogo" height="30" width="30" />-->        
+          <i class="fa fas fa-forumbee text-justify text-center text-light border border-white rounded p-1"></i>
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -50,19 +135,19 @@
               <a class="nav-link text-light" href="#"> Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="#"> Chores </a>
+              <a class="nav-link text-light" href="comingsoon.html"> Chores </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="#"> How it Works </a>
+              <a class="nav-link text-light" href="comingsoon.html"> How it Works </a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown link
+              <a class="nav-link dropdown-toggle text-light" href="comingsoon.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                My Account
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
+                <a class="dropdown-item" href="comingsoon.html">Parent Mode</a>
+                <a class="dropdown-item" href="comingsoon.html">My Rewards</a>
+                <a class="dropdown-item" href="comingsoon.html">My stats</a>
               </div>
             </li>
           </ul>
@@ -71,16 +156,39 @@
     </nav>
     <div class="container">
       <div class="row">
-        <div class="col">
-          
-        </div>
-        <div class="col py-5">
-          <div class="card">
-            <div class="card-header bg-warning roundedCorners">
-              <h3 class="card-title">Why Busy Bee?</h3>
+        <div class="col-6 py-5">
+          <div class="card card1 rounded float-left">
+            <div class="card-body">
+              <img src="img/iron.jpg"  id="iron" class="img-thumbnail img-fluid">
+            </div>
+          </div>
+        </div>  
+        <div class="col-6 py-5">
+          <div class="card rounded" id="choresCard">
+            <div class="card-header bg-warning text-light">
+              <h1 class="card-title">Chores</h1>
             </div>
             <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ullam tenetur, consequatur sunt ratione optio obcaecati hic odio quae maxime. Enim quo sapiente repudiandae deserunt quisquam porro fugiat.
+              <h3 class="text-center">To Do</h3>
+                <input id="todo-textbox" type="text">
+                <button id="todo-add" class="btn btn-warning btn-sm" onclick="addTodo()">Add</button>
+
+                <ul id="todo-list">
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row row-content">
+        <div class="col-12">
+          <div class="card1 mx-auto">
+            <div class="card-header bg-warning rounded text-center text-light">
+              <h3 class="card-title">Why Busy Bee?</h3>
+            </div>
+            <div class="card-body mb-5">
+              <p class="card-text text-center">BusyBee helps keep families lives in order by making chores interactive and rewarding for children. No more nagging your kids to clean their room! With BusyBee, kids can recieve daily reminders to complete chores through the BusyBee App.
               </p>
             </div>
           </div>
@@ -88,64 +196,39 @@
       </div>
     </div>
 
-    <footer class="page-footer font-small blue pt-4">
-      <div class="container-fluid text-center text-md-left">
-        <div class="row">
-          <div class="col-md-6 mt-md-0 mt-3">
-            <h5 class="text-uppercase text-light">Footer Content</h5>
-            <p class="text-light">Here you can use rows and columns to organize your footer content.</p>
-          </div>
-          <hr class="clearfix w-100 d-md-none pb-3">
-            <div class="col-md-3 mb-md-0 mb-3">
-              <h5 class="text-uppercase text-light">Links</h5>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#!" class="text-light">Link 1</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-light">Link 2</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-light">Link 3</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-light">Link 4</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-3 mb-md-0 mb-3">
-              <h5 class="text-uppercase text-light">Links</h5>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#!" class="text-light">Link 1</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-light">Link 2</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-light">Link 3</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-light">Link 4</a>
-                </li>
-              </ul>
+    <footer class="page-footer font-small">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-12 py-5">
+            <div class="mb-5 flex-center">
+              <a class="fb-ic" href="http://facebook.com">
+                <i class="fa fab fa-facebook-f fa-lg text-light mr-md-5 mr-3 fa-2x"> </i>
+              </a>
+              <a class="tw-ic" href="http://twitter.com">
+                <i class="fa fab fa-twitter fa-lg text-light mr-md-5 mr-3 fa-2x"> </i>
+              </a>
+              <a class="ins-ic" href="http://instagram.com">
+                <i class="fa fab fa-instagram fa-lg text-light mr-md-5 mr-3 fa-2x"> </i>
+              </a>
+              <a class="pin-ic" href="http://pinterest.com">
+                <i class="fa fab fa-pinterest fa-lg text-light fa-2x"> </i>
+              </a>
             </div>
           </div>
         </div>
-
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3 text-light">© 2020 Copyright:
-          <a href="https://mdbootstrap.com/" class="text-light"> MDBootstrap.com</a>
-        </div>
-        <!-- Copyright -->
       </div>
-    </footer>
-    <!-- Footer -->
+      <div class="footer-copyright text-center py-3 text-light">© 2020 Copyright:
+        <a href="https://mdbootstrap.com/" class="text-light"> MDBootstrap.com</a>
+      </div>
+    </div>
+  </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+
   </body>
 </html>
