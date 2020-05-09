@@ -16,10 +16,12 @@ function addTodo() {
     li.appendChild(todoText);
     
     let deleteButton = document.createElement("button");
-    let deleteText = document.createTextNode("x");
+    let deleteText = document.createTextNode("x"); 
     deleteButton.appendChild(deleteText);
     deleteButton.onclick = deleteTodo;
     li.appendChild(deleteButton);
+    $(deleteButton).addClass("btn btn-warning btn-sm ml-1");
+
     
     let ul = document.getElementById("todo-list");
     ul.appendChild(li);
